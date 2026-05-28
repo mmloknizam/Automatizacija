@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.*;
 */
 @RestController
 @RequestMapping("/api/predmet")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "*")
 public class PredmetController {
  
     private final PredmetRepository predmetRepository;

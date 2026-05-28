@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 */
 @RestController
 @RequestMapping("/api/skolskagodina")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "*")
 public class SkolskaGodinaController {
  
     private final SkolskaGodinaRepository skolskaGodinaRepository;

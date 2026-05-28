@@ -2,9 +2,38 @@
 <databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
-                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
-    
-    <changeSet id="add-pokrivenostNastave" author="MarijaMilenkovic">
-        <sqlFile path="dml/add-pokrivenostNastave.sql" relativeToChangelogFile="true"/>
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="create-pokrivenostnastave" author="MarijaMilenkovic">
+
+        <createTable tableName="pokrivenostnastave">
+
+            <column name="pokrivenostNastaveID" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+
+            <column name="brojSatiNastave" type="INT">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="predmetID" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="nastavnikID" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="oblikNastaveID" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="skolskaGodinaID" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+
+        </createTable>
+
     </changeSet>
+
 </databaseChangeLog>

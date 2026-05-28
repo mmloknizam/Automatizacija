@@ -28,7 +28,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/api/pokrivenostnastave")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "*")
 public class PokrivenostNastaveController {
 
     private final PokrivenostNastaveService pokrivenostNastaveService;
