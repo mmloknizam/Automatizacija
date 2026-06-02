@@ -105,3 +105,5 @@ http://localhost:8080/nst2025demo/swagger-ui/index.html#/
 2. Pristupiti aplikaciji kroz browser
 
 ---
+
+
