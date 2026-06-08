@@ -192,4 +192,39 @@ class KorisnickiProfilServiceImplTest {
 
         assertEquals("Lozinka mora imati najmanje 8 karaktera", ex.getMessage());
     }
+    
+    @Test
+    void login_success_returnsValidResponse() throws Exception {
+        LoginRequestDto request = new LoginRequestDto("test@fon.bg.ac.rs", "Password1!");
+
+        Uloga uloga = new Uloga();
+        uloga.setTip("Administrator");
+
+        KorisnickiProfil korisnik = new KorisnickiProfil();
+        korisnik.setEmail("test@fon.bg.ac.rs");
+        korisnik.setLozinka("Password1!");
+        korisnik.setEnabled(true);
+        korisnik.setUloga(uloga);
+        korisnik.setKorisnickiProfilID(1L);
+
+        when(korisnickiProfilRepository.findByEmail(anyString()))
+                .thenReturn(Optional.of(korisnik));
+
+        LoginResponseDto response = service.login(request);
+
+        assertNotNull(response);
+        assertEquals("test@fon.bg.ac.rs", response.getEmail());
+        assertEquals("Administrator", response.getUloga());
+    }
+    
+    @Test
+    void login_shouldFail_whenUserNotFound() {
+        when(korisnickiProfilRepository.findByEmail(anyString()))
+                .thenReturn(Optional.empty());
+
+        Exception ex = assertThrows(Exception.class,
+                () -> service.login(new LoginRequestDto("x@fon.bg.ac.rs", "pass")));
+
+        assertEquals("Korisnik ne postoji", ex.getMessage());
+    }
 }
