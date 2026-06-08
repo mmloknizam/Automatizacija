@@ -22,6 +22,7 @@ Aplikacija **Plan pokrivenosti nastave** namenjena je evidenciji i upravljanju p
 ### Baza podataka
 - Relaciona baza (konfigurisana kroz Liquibase)
 
+
 ---
 
 ## Funkcionalnosti aplikacije
@@ -37,6 +38,7 @@ Aplikacija **Plan pokrivenosti nastave** namenjena je evidenciji i upravljanju p
 - Različite uloge korisnika:
   - **KORISNIK**
   - **ADMINISTRATOR**
+
 
 ---
 
