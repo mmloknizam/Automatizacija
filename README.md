@@ -5,6 +5,7 @@ Aplikacija **Plan pokrivenosti nastave** namenjena je evidenciji i upravljanju p
 
 ---
 
+
 ## Tehnologije
 ### Backend
 - Java
@@ -103,6 +104,7 @@ http://localhost:8080/nst2025demo/swagger-ui/index.html#/
 ### Frontend
 1. Pokrenuti React aplikaciju
 2. Pristupiti aplikaciji kroz browser
+
 
 ---
 
