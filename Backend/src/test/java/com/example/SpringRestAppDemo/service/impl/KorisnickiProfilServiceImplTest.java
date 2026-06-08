@@ -166,4 +166,30 @@ class KorisnickiProfilServiceImplTest {
 
         assertEquals("Stara lozinka nije tačna!", ex.getMessage());
     }
+    
+    @Test
+    void register_shouldFail_whenEmailInvalidDomain() {
+        RegisterRequestDto dto = new RegisterRequestDto();
+        dto.setEmail("test@gmail.com");
+        dto.setLozinka("Password1!");
+        dto.setUlogaID(1L);
+
+        Exception ex = assertThrows(Exception.class,
+                () -> service.register(dto));
+
+        assertEquals("Email mora biti u formatu @fon.bg.ac.rs", ex.getMessage());
+    }
+    
+    @Test
+    void register_shouldFail_whenPasswordTooShort() {
+        RegisterRequestDto dto = new RegisterRequestDto();
+        dto.setEmail("test@fon.bg.ac.rs");
+        dto.setLozinka("123");
+        dto.setUlogaID(1L);
+
+        Exception ex = assertThrows(Exception.class,
+                () -> service.register(dto));
+
+        assertEquals("Lozinka mora imati najmanje 8 karaktera", ex.getMessage());
+    }
 }
