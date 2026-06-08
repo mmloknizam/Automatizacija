@@ -42,6 +42,7 @@ Aplikacija **Plan pokrivenosti nastave** namenjena je evidenciji i upravljanju p
 
 ---
 
+
 ### Uloge i prava pristupa
 
 #### 👤 Korisnik
@@ -61,13 +62,17 @@ Aplikacija **Plan pokrivenosti nastave** namenjena je evidenciji i upravljanju p
   - da vidi **detalje plana** i
   - da **izmeni nastavnika** za određeni predmet
 
+
 ---
+
 
 ### Ograničenja u sistemu
 - Uvedena su **ograničenja broja sati nastave** po obliku nastave
 - Sistem ne dozvoljava unos vrednosti koje prelaze definisana pravila
 
+
 ---
+
 
 ## Backend arhitektura
 - Kreiran je **jak entitet Plan pokrivenosti nastave**
