@@ -5,6 +5,7 @@ Aplikacija **Plan pokrivenosti nastave** namenjena je evidenciji i upravljanju p
 
 ---
 
+
 ## Tehnologije
 ### Backend
 - Java
@@ -20,6 +21,7 @@ Aplikacija **Plan pokrivenosti nastave** namenjena je evidenciji i upravljanju p
 
 ### Baza podataka
 - Relaciona baza (konfigurisana kroz Liquibase)
+
 
 ---
 
@@ -37,7 +39,9 @@ Aplikacija **Plan pokrivenosti nastave** namenjena je evidenciji i upravljanju p
   - **KORISNIK**
   - **ADMINISTRATOR**
 
+
 ---
+
 
 ### Uloge i prava pristupa
 
@@ -58,13 +62,17 @@ Aplikacija **Plan pokrivenosti nastave** namenjena je evidenciji i upravljanju p
   - da vidi **detalje plana** i
   - da **izmeni nastavnika** za određeni predmet
 
+
 ---
+
 
 ### Ograničenja u sistemu
 - Uvedena su **ograničenja broja sati nastave** po obliku nastave
 - Sistem ne dozvoljava unos vrednosti koje prelaze definisana pravila
 
+
 ---
+
 
 ## Backend arhitektura
 - Kreiran je **jak entitet Plan pokrivenosti nastave**
@@ -103,6 +111,7 @@ http://localhost:8080/nst2025demo/swagger-ui/index.html#/
 ### Frontend
 1. Pokrenuti React aplikaciju
 2. Pristupiti aplikaciji kroz browser
+
 
 ---
 
